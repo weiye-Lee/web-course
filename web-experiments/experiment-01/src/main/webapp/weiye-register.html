@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../resources/weiye.css">
+</head>
+<body>
+<img src="../resources/cat.png" alt="cat">
+
+<a href="http://www.baidu.com">click</a>
+<table border="1">
+    <thead style="color: green">
+    <tr>
+        <th>表头</th>
+        <th>表头</th>
+        <th>表头</th>
+    </tr>
+    </thead>
+    <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>2</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>3</td>
+        <td>3</td>
+    </tr>
+</table>
+
+<div>
+    <ul style="list-style-type: disc">
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+    </ul>
+    <ul style="list-style-type: circle">
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+    </ul>
+    <ul style="list-style-type: square">
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+    </ul>
+
+    <ul style="outline: none">
+        <li>head</li>
+        <li>head</li>
+        <li>head</li>
+    </ul>
+</div>
+
+line
+<div>
+    <h2>hello world</h2>
+    <p>div h2 p 都是块级元素</p>
+</div>
+line
+<br>
+<a style="width:100px ;display: inline-block" href="">hello</a><a href="">world</a>
+<p hidden>
+    <span>
+        内联级元素需要多长占多长，没有宽度
+        <br>
+        块级元素占一行，有高度宽度，别人不能用这一行
+        <br>
+        inline-block 元素有宽高 ，别人可以用这一行
+    </span>
+</p>
+<div>
+    <form action="">
+        账号：<input type="text"> <br>
+        密码：<input type="text"> <br>
+        其他：<input type="text">
+    </form>
+    <form action="">
+        man : <input type="checkbox"> <br>
+        woman: <input type="checkbox" checked>
+    </form>
+    <form action="">
+        <input type="radio"> hello <br>
+        <input type="radio"> world <br>
+        <input type="radio"> ! <br>
+    </form>
+    <form action="">
+        <input type="file" accept=".txt">
+    </form>
+    <from>
+        <input type="date" min="1999-10-20">
+    </from>
+    <form action="">
+        <input type="number" min="100" max="200" step="2">步进器
+    </form>
+    <form action="">
+        <input type="checkbox" id="man">
+        <label for="man">man</label>
+        <br>
+        <input type="checkbox" id="woman">
+        <label for="woman">woman</label>
+    </form>
+</div>
+
+<div><select name="name" id="sel">
+    <option value="bo">tom</option>
+    <option value="bo">don</option>
+    <option value="bo">lee</option>
+</select></div>
+
+<div>
+    <form action="">
+        <input list="browser">
+        <datalist id="browser">
+            <option>tom</option>
+            <option>don</option>
+            <option>sun</option>
+        </datalist>
+    </form>
+    <form>
+        <input type="text" value="bo"><br>
+        <input type="password"><br>
+        <select>
+            <option value=""></option>
+            <option value="">bo</option>
+            <option value="">bobo</option>
+            <option selected>weiye</option>
+        </select>
+        <button type="submit">submit</button>
+        <button type="reset">reset</button>
+    </form>
+</div>
+<div>
+    <h3 class="bg-green">hello world</h3>
+    <p class="bg-green">hello world</p>
+    <p hidden>根据标签的类选择器</p>
+    <h3 class="center red">hello world</h3>
+    <p class="red">this paragraph is not affected by css</p>
+    <p hidden>这就是层叠</p>
+    <h1>可以最小化代码</h1>
+    <h2>最小化代码</h2>
+</div>
+<div id="px1">
+    <p>hello world</p>
+    <div id="px2">
+        hello world
+        <span id="em1">
+            hello world
+        </span>
+    </div>
+</div>
+<br>
+<div id="father">
+    father
+    <div id="son">
+        son
+    </div>
+</div>
+
+<div >
+   <div class="center2">margin auto</div>
+</div>
+
+<img src="../resources/cat.png" alt="cat" class="radius">
+<img src="../resources/cat.png" alt="cat" class="radius2">
+
+<div class="img-container">
+    <img src="../resources/cat.png" alt="cat" class="radius2 thumb2 thumb">
+
+</div>
+
+<div class="bg-green op1">透明度</div>
+<div class="bg-green op2">透明度</div>
+
+</body>
+</html>
