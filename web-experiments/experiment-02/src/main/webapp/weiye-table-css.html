@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格</title>
+    <style>
+        .label{
+            color: white;
+            border-radius: 4px;
+        }
+        .label-success{
+            background: darkgreen;
+        }
+        .label-failed{
+            background: #f44336;
+        }
+        table th ,table td{
+            padding: 10px;
+            border-bottom: 1px solid darkgray;
+            text-align: center;
+        }
+        tbody tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        a.btn{
+            text-decoration: none;
+            color: white;
+            background: red;
+            display: inline-block;
+            padding: 4px;
+            border-radius: 4px;
+        }
+        a.btn:hover{
+            background: #f44336;
+        }
+
+
+    </style>
+</head>
+<body>
+<p>hello ,this is an simple
+    <span class="label label-success">table</span>
+    <span class="label label-failed">example</span>
+</p>
+<table>
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>姓名</th>
+        <th>班级</th>
+        <th>email</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>郭立新</td>
+        <td>软件工程2046级1班</td>
+        <td>guo@example.com</td>
+        <td><a href="#" class="btn">修改</a> <a href="#" class="btn">删除</a></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>黄英</td>
+        <td>软件工程2046级1班</td>
+        <td>huang@example.com</td>
+        <td><a href="#" class="btn">修改</a> <a href="#" class="btn">删除</a></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>吕惠玲</td>
+        <td>软件工程2046级2班</td>
+        <td>lv@example.com</td>
+        <td><a href="#" class="btn">修改</a> <a href="#" class="btn">删除</a></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

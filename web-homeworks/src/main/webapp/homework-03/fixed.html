@@ -3,8 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+
+        }
+        .left-container{
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            left: 0;
+            width: 100px;
+            background: blueviolet;
+        }
+        .button-container{
+            width: 150px;
+        }
+        .button-container a{
+            display: inline-block;
+            justify-content: center;
+            margin: auto;
+            padding: 10px;
+            border: 1px solid pink;
+        }
+        .button-container:hover i{
+            color: black;
+        }
+        .button-container i{
+            font-size: 2em;
+            color: white;
+        }
+
+
+    </style>
 </head>
 <body>
-别看了，啥也没有，自己写吧
+<div class="main">
+    <div class="left-container">
+        <div class="button-container">
+            <a href="">
+                <i class="material-icons">ac_unit</i>
+            </a>
+        </div>
+        <div class="button-container">
+            <a href="">
+                <i class="material-icons">ac_unit</i>
+            </a>
+        </div>
+        <div class="button-container">
+            <a href="">
+                <i class="material-icons">ac_unit</i>
+            </a>
+        </div>
+    </div>
+    <div class="content-container">
+
+    </div>
+</div>
 </body>
 </html>
