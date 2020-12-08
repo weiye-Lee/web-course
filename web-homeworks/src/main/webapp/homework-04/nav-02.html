@@ -26,23 +26,44 @@
             list-style: none;
         }
         nav li a {
+            margin-right: 10px;
+            background: blueviolet;
             display: block;
             color: #000;
             padding: 10px 15px;
             text-decoration: none;
         }
-
         nav i {
+            position: relative;
+            top: 5px;
             padding-right: 15px;
             vertical-align: middle;
         }
         nav span {
             vertical-align: middle;
+            position: relative;
+            top: 5px;
         }
-        nav a:hover {
-            background: #c3c3c3;
+        nav a:hover i{
+            color: wheat;
+            top: -1px;
+            transition: top 0.5s;
+        }
+        nav a:hover span{
+            color: wheat;
+            position: relative;
+            top: -1px;
+            transition: top 0.5s;
+        }
+        @media (max-width: 300px) {
+            /*
+            同时可以设置另外一个触发条件
+            */
         }
         @media (max-width: 600px) {
+            /*
+            当条件窗口中某个条件达到时，触发下面的scc
+             */
             nav {
                 min-width: 60px;
             }
@@ -70,6 +91,7 @@
             distinctio dolorum exercitationem illo itaque placeat provident quam repellendus unde vero? Ab error
             inventore iure voluptate.</p>
     </div>
+    <p style="display: none">hello world</p>
 </div>
 </body>
 </html>
