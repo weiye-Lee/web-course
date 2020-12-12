@@ -124,6 +124,7 @@
         document.getElementById("p1").style.display = "none";
         window.alert("hidden");
     }
+
     $(function () {
         // 点击b1后，执行回调函数
         $("#b1").click(() => {
@@ -132,10 +133,10 @@
                 alert("hidden");
             });
         });
-       /* $("#b1").click(() => {
-          $.when($("#p1").hide('fast'))
-            .done(() => alert("hidden"));
-        });*/
+        /* $("#b1").click(() => {
+           $.when($("#p1").hide('fast'))
+             .done(() => alert("hidden"));
+         });*/
 
         /* -------------hover()，2个回调方法，第一个为进入，第二个为离开 --------- */
         $("#p2").hover(function () {
@@ -166,6 +167,7 @@
         /*------------------html()--------------  */
         $("#gethtml").click(function () {
             alert($("#html").html());
+            alert("hello world!")
         });
         $("#sethtml").click(function () {
             $("#html").html("修改文本<span style='color:red;'>内容</span>");

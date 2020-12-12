@@ -28,6 +28,7 @@ public class HelloServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
     // 处理http get请求
+        response.setHeader("hey","hello world");
         LOGGER.info("doGet()");
     }
 }

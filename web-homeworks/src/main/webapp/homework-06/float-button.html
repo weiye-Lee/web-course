@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>weiye</title>
+    <link href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .fab{
+            position: fixed;
+            right: 0;
+            top: 0;
+            height: 80vh;
+            width: 100px;
+            text-align: center;
+            background: pink;
+        }
+
+        .fab-btn{
+
+            margin:10px auto;
+            text-align: center;
+            width: max-content;
+        }
+        .fab-btn i{
+            padding: 5px;
+            font-size: 2em;
+            display: block;
+            color: white;
+            background: #00adf5;
+            border-radius: 50%;
+            transition:  0.3s;
+        }
+
+        .fab-btn :hover {
+            transform: rotate(180deg);
+        }
+        .fab-menu{
+            display: none;
+        }
+        .normal-color{
+            color: #00adf5;
+        }
+        .warn-color{
+            color: #f44336;
+        }
+        .fab-menu i{
+            font-size: 2em;
+        }
+
+        /*
+        #b2:hover{
+            transform: rotate(180deg);
+        }
+
+         */
+
+    </style>
+</head>
+<body>
+<div class="fab">
+    <div class="fab-btn">
+        <i class="material-icons" id="icon">drafts</i>
+    </div>
+    <div class="fab-menu">
+        <a href="">
+            <i class="material-icons normal-color">mode_edit</i>
+        </a>
+
+        <a href="">
+            <i class="material-icons normal-color">keyboard</i>
+        </a>
+        <a href="">
+            <i class="material-icons warn-color">clear</i>
+        </a>
+
+    </div>
+
+</div>
+<button id="b2">edge</button>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(function () {
+        $(".fab-btn").hover(function () {
+
+            let tem = $("#icon")
+            let icon = $(".fab-menu")
+            if (tem.text() === "remove") {
+                tem.text("drafts")
+                icon.css({
+                    "display": "none"
+                })
+            } else {
+                tem.text("remove")
+                icon.css({
+                    "display": "flex",
+                    "flex-direction": "column",
+                    "margin":"10px"
+                })
+                icon.fadeIn(5000)
+            }
+        })
+    })
+</script>
+</body>
+</html>
