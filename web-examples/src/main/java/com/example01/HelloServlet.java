@@ -29,6 +29,7 @@ public class HelloServlet extends HttpServlet {
             throws ServletException, IOException {
     // 处理http get请求
         response.setHeader("hey","hello world");
+        System.out.println("<h1>hello world</h1>");
         LOGGER.info("doGet()");
     }
 }

@@ -21,10 +21,9 @@
         }
 
         .fab-btn{
-
+            width: max-content;
             margin:10px auto;
             text-align: center;
-            width: max-content;
         }
         .fab-btn i{
             padding: 5px;
@@ -39,6 +38,12 @@
         .fab-btn :hover {
             transform: rotate(180deg);
         }
+        /* todo the bug it is
+        .fab-btn:hover + .fab-menu{
+            display: flex;
+            flex-direction: column;
+        }
+        */
         .fab-menu{
             display: none;
         }
@@ -101,7 +106,6 @@
                     "flex-direction": "column",
                     "margin":"10px"
                 })
-                icon.fadeIn(5000)
             }
         })
     })
