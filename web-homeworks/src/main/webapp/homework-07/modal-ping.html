@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .modal{
+            height: 100vh;
+            width: 100vw;
+            background-color: rgba(128,138,135,0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        .modal-dialog{
+            width: 50%;
+            background-color:white;
+            position: absolute;
+            left: 25%;
+            top: 50px;
+            border: solid #c3c3c3;
+            border-radius: 10px;
+        }
+        .modal-dialog .header{
+            font-size:larger;
+            font-weight: bolder;
+            border: 1px solid #c3c3c3;
+            padding: 10px;
+        }
+        .modal-dialog .content{
+            border: 1px solid #c3c3c3;
+            padding: 15px;
+        }
+        .modal-dialog .footer{
+            border: 1px solid #c3c3c3;
+            padding: 10px;
+        }
+        .modal-dialog .footer button{
+            color: white;
+            padding: 8px;
+            border-radius: 4px;
+            border: none;
+        }
+        .btnclose{
+            background-color: #c3c3c3;
+        }
+        .btnsavechange{
+            background-color: #03a9f4;
+        }
+        .modal-dialog .footer .btngroup{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    关羽，本字长生，后改字云长，早年因犯事逃离家乡流落至幽州涿郡。[1]到了中平元年（184年），黄巾起义爆发，刘备在涿县组织起了一支义勇军。关羽、张飞都加入其中，随刘备辗转各地，参与扑灭黄巾军的战争，刘备、关羽、张飞三人的感情好到连睡觉也要睡在一起。刘备担任平原相时，任命关羽、张飞为别部司马，分统部曲。随刘备出席活动时，关羽和张飞则侍立刘备左右，保护刘备周全。[1]
+
+    兴平元年（194年），曹操因曹嵩被杀而迁怒于陶谦，于是发兵攻打徐州。陶谦求救于刘备，刘备和关羽率千余人前往救援。曹操兵退后，陶谦表刘备为豫州刺史，关羽与刘备屯兵于小沛。而后在陶谦等人的再三相让下，刘备领徐州牧。
+
+    建安三年（198年），刘备军夺取了吕布军队的黄金，吕布于是派遣高顺率军攻打刘备。曹操遣夏侯惇前来帮助刘备，被高顺打败。同年九月，高顺击溃刘备。于是，曹操亲自率兵东征吕布。刘备与曹操共擒吕布于下邳，夺得徐州。曹操任车胄为徐州刺史。刘备、关羽、张飞等人便跟随曹操班师回许昌。
+
+    刘备与曹操在许昌围猎时，关羽劝刘备杀掉曹操，但刘备认为，在当时的情况下，曹操活着对国家有利，杀了曹操实在可惜，于是不从。
+
+    后来，袁术北上投奔袁绍，刘备奉曹操命拦截袁术于徐州，刘备趁机袭杀徐州刺史车胄，命关羽守下邳（今江苏省睢宁县古邳镇），代行太守职务，刘备则返回小沛（今江苏沛县）。
+    <br>
+    <button data-target="modal1">激活按钮</button>
+
+
+
+
+    <div class="modal" id="modal1">
+        <div class="modal-dialog" id="modal2" data-dismiss="modal1">
+            <div class="header">
+                Modal title
+            </div>
+            <div class="content">
+                Woohoo,you're reading this text in a modal!
+            </div>
+            <div class="footer">
+                <div class="btngroup" >
+                    <button class="btnclose" data-close="modal2">Close</button>
+                    <button class="btnsavechange">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(function (){
+        $("button[data-target]").click(function (){
+            let modalid = $(this).data("target");
+            $("#"+modalid).fadeIn(500);
+            $("#modal2").animate({top:"30px"});
+        })
+        $(".btnclose").click(function (){
+            let modalid = $(this).data("close");
+            $("#modal1").fadeOut(500);
+            $("#"+modalid).animate({top:"50px"});
+        })
+        $("#modal1").click(function (){
+            $(this).fadeOut(500);
+            $("#modal2").animate({top:"50px"});
+        })
+        $("#modal2").click(function (){
+            return false;
+        })
+    })
+</script>
+</body>
+</html>

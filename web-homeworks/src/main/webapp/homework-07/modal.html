@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>weiye</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .modal-container {
+            width: 100vw;
+            height: 100vh;
+            background: rgba(156, 155, 156, 0.5);
+            position: fixed;
+            left: 0;
+            top: 0;
+            border: 1px solid black;
+            display: none;
+        }
+
+        .modal {
+            border-radius: 5px;
+            /*border: 1px solid red;*/
+            width: 30%;
+            margin: 30px auto;
+            background: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            position: relative;
+        }
+
+        .modal hr {
+            margin: 5px;
+            border-bottom: 0;
+            color: darkgray;
+        }
+
+        .modal .title p{
+            font-size: 1.5em;
+            margin: 10px;
+        }
+
+        .modal .content {
+            margin: 10px;
+        }
+
+        .modal .btn-container {
+            margin: 10px;
+            text-align: right;
+        }
+
+        .modal .btn-container button {
+            margin: 10px 5px;
+            padding: 5px;
+            color: white;
+            border-radius: 4px;
+            border: 1px solid darkgray;
+            outline: 0;
+        }
+
+        .modal .btn-container button :hover {
+            /*设置悬浮效果*/
+        }
+
+        .normal {
+            background: darkgray;
+        }
+
+        .success {
+            background: #03a9f4;
+        }
+        .content-container{
+            margin: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="main">
+    <div class="content-container">
+        <p>good morning ,my neighbor</p>
+        <br>
+        <button>click it to show modal</button>
+    </div>
+    <div class="modal-container">
+        <div class="modal">
+            <div class="title">
+                <p>eggs</p>
+            </div>
+            <hr>
+            <div class="content">woohoo ~ you are clicking me!</div>
+            <br>
+            <hr>
+            <div class="btn-container">
+                <button class="normal">close</button>
+                <button class="success">I know</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(function () {
+
+        let temp = $(".modal-container");
+        let modal = $(".modal")
+        $(".normal").click(function () {
+            temp.fadeOut(200);
+            modal.animate({top:"50px"})
+            /**
+             * animate 设置无效的原因
+             * 如果原来没有采用定位方式，设置动画top 50px必然失效
+             */
+        })
+        temp.click(function () {
+            temp.fadeOut(200);
+            $(".modal").animate({top:"50px"})
+        })
+        modal.click(function () {
+            return false;
+        })
+        $(".content-container > button").click(function () {
+            temp.fadeIn(200);
+            modal.animate({top:"30px"})
+        })
+    })
+</script>
+</body>
+</html>
